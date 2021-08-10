@@ -46,6 +46,7 @@ function generateNumbers() {
             cell.removeAttribute("onclick");
             cell.innerHTML = number;
             cell.style.fontSize = "20px";
+            cell.style.cursor = "default";
         }
     }
 }
@@ -139,7 +140,7 @@ function check_if_win_or_lose() {
         for (var j = 1; j <= 9; ++j) {
             var cell = document.getElementById(i + "" + j);
             if (cell.style.backgroundColor == "red") {
-                return document.getElementById("message").innerHTML = "<h3> Lose. </h3>";
+                return 0;
             }
         }
     }
