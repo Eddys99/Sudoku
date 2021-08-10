@@ -53,13 +53,11 @@ function generateNumbers() {
 
 function checkNumberGenerated(line, column, number) {
     for (var i = 1; i <= 9; ++i) {
-        var checkColumn = document.getElementById(i + "" + column);
-        if (checkColumn.innerHTML == number) {
+        var checkLine = document.getElementById(i + "" + column);
+        var checkColumn = document.getElementById(line + "" + i);
+        if (checkLine.innerHTML == number) {
             return 0;
         }
-    }
-    for (var i = 1; i <= 9; ++i) {
-        var checkColumn = document.getElementById(line + "" + i);
         if (checkColumn.innerHTML == number) {
             return 0;
         }
